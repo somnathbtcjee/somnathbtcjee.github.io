@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TA-ship</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black; /* Black background for the header */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+            font-family: 'Impact', Charcoal, sans-serif; /* Different font style */
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .tabs a {
+            text-decoration: none;
+            color: white; /* Changed the color to red */
+            margin: 0 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+
+        .tabs a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .tabs a.underline {
+            text-decoration: none; /* Removed the underline */
+        }
+
+        .ta-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .ta-header {
+            font-size: 36px; /* Changed font size */
+            font-weight: bold;
+            color: #00008b; /* Changed the color to deep blue */
+            margin-bottom: 10px;
+        }
+
+        .ta-item {
+            margin-bottom: 5px; /* Reduced distance between subjects and time periods */
+            display: flex;
+            flex-direction: column; /* Changed the flex direction to column */
+            align-items: flex-start; /* Changed alignment to flex-start */
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .ta-item:last-child {
+            border-bottom: none;
+        }
+
+        .ta-period {
+            font-size: 18px;
+            color: red; /* Changed the color to deep blue */
+            text-decoration: underline; /* Underline the TA period text */
+            width: 160px; /* Set a fixed width for the TA period column */
+        }
+
+        .ta-name {
+            font-size: 18px;
+            color: #444;
+            margin-left: 30px; /* Add some left margin for better alignment */
+            position: relative; /* Set position to relative to allow triangle symbol */
+        }
+        
+        .ta-name::before {
+            content: "▶";
+            position: absolute;
+            left: -24px; /* Adjust the left position to align the triangle properly */
+        }
+
+        .ta-instructor {
+            font-size: 18px;
+            color: #444;
+            margin-left: 30px; /* Add left margin to align with TA name */
+        }
+
+        .footer {
+            text-align: center;
+            background-color: black; /* Black background for the footer */
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        .notlined {
+            text-decoration: none;
+        }
+
+        .footer::before {
+            content: "Last updated: ";
+            font-weight: bold;
+        }
+
+        .footer span {
+            font-style: italic;
+        }
+        .notlined {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="tabs">
+        <a href="index.html">Home</a>
+        <a href="coursework.html">Course Work</a>
+        <a href="taship.html" class="underline">TA-ship</a> <!-- Underlined TA-ship tab -->
+        <a href="internships.html">Research Internships and Talks</a>
+        <a href="hobbies.html">Hobbies</a>
+        <!-- Add more tabs as needed -->
+    </div>
+</header>
+<div class="ta-container">
+    <div class="ta-header">Teaching Assistantship</div>
+    <div class="ta-item">
+        <div class="ta-period">Apr-Jul'21</div><br>
+        <div class="ta-name"> <a href="https://github.com/nilavam/nilavam.github.io/tree/main/TA/DMAT21" class="notlined">Discrete Maths</a>(CMI)</div>
+        <div class="ta-instructor"> by prof. K V Subrahmanyam</div>
+    </div>
+    <div class="ta-item">
+        <div class="ta-period">Aug-Nov'21</div><br>
+        <div class="ta-name"> Mathematical Method of Analysis(CMI)</div>
+        <div class="ta-instructor"> by prof. Kavita Sutar</div>
+    </div>
+    <div class="ta-item">
+        <div class="ta-period">Jan-Apr'22</div><br>
+        <div class="ta-name"> <a href="https://www.cmi.ac.in/~prajakta/courses/s2022/index.html" class="notlined">Computational Complexity Theory</a>(CMI)</div>
+        <div class="ta-instructor"> by prof. Prajakta Nimbhorkar</div>
+    </div>
+    <div class="ta-item">
+        <div class="ta-period">Jan-Apr'23</div><br>
+        <div class="ta-name"> Discrete Maths(CMI)</div>
+        <div class="ta-instructor"> by prof. V. Arvind and prof. Amit Sinhababu</div>
+    </div>
+    <div class="ta-item">
+        <div class="ta-period">Aug-Nov'23</div><br>
+        <div class="ta-name"> <a href="https://onlinecourses.nptel.ac.in/noc23_cs96/course" class="notlined">Design and Analysis of Algorithms</a>(NPTEL)</div>
+        <div class="ta-instructor"> by prof. Madhavan Mukund</div>
+    </div>
+</div>
+<div class="footer">
+    Last updated: <span id="lastUpdated"></span>
+</div>
+<script>
+    var currentDate = new Date();
+    var year = currentDate.getFullYear();
+    var month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+    var day = ("0" + currentDate.getDate()).slice(-2);
+    var formattedDate = year + "-" + month + "-" + day;
+    document.getElementById("lastUpdated").textContent = formattedDate;
+</script>
+</body>
+</html>
