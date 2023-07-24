@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Somnath's Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-*****" crossorigin="anonymous" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" sizes="48x48" href="assets/favicon.ico">
+    <link rel="manifest" href="assets/site.webmanifest">
+
+    <!-- Font Awesome icons (free version)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/vishwa.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/academicons.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d3f7d2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image: url('https://www.cmi.ac.in/~somnathb/pictures/back2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            animation: slide-in-left 1s forwards;
+            transform: translateX(-100%);
+        }
+
+        .name {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .profile-pics {
+            width: 40%;
+        }
+
+        .profile-pics img {
+            width: 100%;
+        }
+
+        .profile-info {
+            width: 60%;
+            padding-left: 20px;
+        }
+
+        .contact-education {
+            display: flex;
+            padding: 20px;
+            background-color: white;
+            margin-top: 20px;
+        }
+
+        .contact-info {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .education-background {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .tabs {
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .tabs a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+
+        .tabs a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .tabs a.underline {
+            text-decoration: underline;
+        }
+
+        .contact {
+            margin-top: 20px;
+        }
+
+        .contact p {
+            margin: 0;
+        }
+
+        .contact a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .footer::before {
+            content: "Last updated: ";
+            font-weight: bold;
+        }
+
+        .footer span {
+            font-style: italic;
+        }
+
+        /* Slideshow Styles */
+        .slideshow-container {
+            max-width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+        }
+
+        .mischief {
+            text-align: center;
+            font-size: 12px;
+            color: #666666;
+            margin-top: -20px;
+        }
+
+        .quote {
+            font-family: 'Indie Flower', cursive;
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        @keyframes slide-in-left {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .prank-container {
+            position: relative;
+        }
+
+        .speech-bubble {
+            display: none;
+            position: absolute;
+            top: -70px;
+            left: 120px;
+            background-color: lightblue; /* Change background color to light blue */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+            width: 150px;
+            z-index: 1;
+        }
+
+        .speech-bubble:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 20px;
+            border-style: solid;
+            border-width: 10px;
+            border-color: transparent transparent white transparent; /* Change border color to white */
+        }
+
+        .cancel-button {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: red; /* Change color to red */
+            cursor: pointer;
+        }
+
+        .prank-message {
+            margin: 0;
+            text-align: center;
+            font-family: Arial, sans-serif; /* Change font family */
+            font-size: 14px; /* Change font size */
+            font-style: italic; /* Add italic style */
+        }
+
+        .prank-button {
+            padding: 5px 10px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: transparent;
+            color: black; /* Change text color to black */
+            border: none;
+            cursor: pointer;
+        }
+
+        .prank-button:hover {
+            background-color: #cc0000; /* Change background color on hover */
+        }
+
+        /* Updated styles for Facebook, LinkedIn, and Instagram logos */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .logo-container a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+            background-color: grey;
+            border-radius: 50%;
+        }
+
+        .logo-container i {
+            font-size: 18px;
+            color: white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="name">Somnath   Bhattacharjee</div>
+</header>
+<div class="tabs">
+    <a href="coursework.html" class="underline">Home</a>
+    <a href="coursework.html">Course-work</a>
+    <a href="#taship">TA-ship</a>
+    <a href="#internships">Research Internships and Talks</a>
+    <a href="#hobbies">Hobbies</a>
+</div>
+<div class="content">
+    <div class="profile-pics">
+        <div class="slideshow-container">
+            <br>
+            <div class="slide">
+                <img src="https://www.cmi.ac.in/~somnathb/pictures/pic4.jpg" alt="Picture 1">
+            </div>
+            <div class="slide">
+                <img src="https://www.cmi.ac.in/~somnathb/pictures/pic3.jpg" alt="Picture 2">
+            </div>
+            <div class="slide">
+                <img src="https://www.cmi.ac.in/~somnathb/pictures/pic1.jpg" alt="Picture 3">
+            </div>
+        </div>
+        <div class="quote">"I solemnly swear that I am up to no good."</div>
+        <!-- Logo container with Facebook, LinkedIn, and Instagram logos -->
+        <div class="logo-container">
+            <a href="https://www.facebook.com/somnath.bhattacharjee.18294/" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/somnath-bhattacharjee-0260271b8/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/severus_snape.8523/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+    <div class="profile-info">
+        <br>
+        <p>Hey stalker &#128521;, interested about me? hah hah? &#128064;</p>
+        <p>I'm Somnath, a second-year MSc student studying at <a class="lin" href="https://www.cmi.ac.in/" target="_blank">Chennai Mathematical Institute (CMI)</a>, Chennai,
+            India (2022-present). Previously, I completed my BSc in Maths and Computer Science from CMI as well (2019-2022). I am fortunate to be an alumnus of <a class="lin" href="https://www.rkmvnarendrapur.org/" target="_blank">Ramakrishna Mission Vidyalaya, Narendrapur</a> (2011-2019) where I completed my Madhyamik and Higher secondary (science stream) education.</p>
+
+        <div class="prank-container"> Here are my grades if you wish to see it
+            <div class="speech-bubble">
+                <p class="prank-message" id="prankMessage">Hold on... you did not give me biriyani treat....you are not privileged to know my grades</p>
+                <span class="cancel-button" id="cancelButton">&times;</span>
+            </div>
+            <button class="prank-button" id="prankButton">+</button>
+        </div>
+        <p>I am broadly interested in Algorithms and Complexity Theory with some Algebraic flavor, particularly in Algebraic Complexity Theory, Algebraic and Randomized Algorithms, Pseudorandomness.</p>
+		<br><p> Get in touch at <a href="mailto:somnathb@cmi.ac.in">somnathb@cmi.ac.in </a>
+	</div>
+</div>
+<br>
+
+<div class="footer">
+    Last updated: <span id="lastUpdated"></span>
+</div>
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change slide every 3 seconds
+    }
+
+    // Set the current date as the last updated date
+    var currentDate = new Date();
+    var year = currentDate.getFullYear();
+    var month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+    var day = ("0" + currentDate.getDate()).slice(-2);
+    var formattedDate = year + "-" + month + "-" + day;
+    document.getElementById("lastUpdated").textContent = formattedDate;
+</script>
+<script>
+    var prankButton = document.getElementById("prankButton");
+    var speechBubble = document.querySelector(".speech-bubble");
+    var cancelButton = document.getElementById("cancelButton");
+
+    prankButton.addEventListener("click", function () {
+        speechBubble.style.display = "block";
+    });
+
+    cancelButton.addEventListener("click", function () {
+        speechBubble.style.display = "none";
+    });
+</script>
+</body>
+</html>
