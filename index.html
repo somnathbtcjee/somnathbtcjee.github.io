@@ -280,7 +280,7 @@
             width: 30px;
             height: 30px;
             margin: 0 5px;
-            background-color: grey;
+            background-color: black;
             border-radius: 50%;
         }
 
@@ -288,13 +288,61 @@
             font-size: 18px;
             color: white;
         }
+		        @media (max-width: 768px) {
+            header {
+                padding: 50px;
+                font-size: 24px;
+            }
+
+            .name {
+                font-size: 40px;
+            }
+
+            .content {
+                flex-direction: column;
+            }
+
+            .profile-pics {
+                width: 100%;
+            }
+
+            .profile-info {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .contact-education {
+                flex-direction: column;
+            }
+
+            .contact-info,
+            .education-background {
+                padding: 0;
+            }
+
+            .tabs {
+                flex-wrap: wrap;
+            }
+
+            .tabs a {
+                font-size: 16px;
+                padding: 5px;
+            }
+
+            .footer {
+                padding: 5px;
+            }
+        }
+	
+    
+
     </style>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-    <div class="name">Somnath   Bhattacharjee</div>
+    <div class="name">Somnath<br>Bhattacharjee</div>
 </header>
 <div class="tabs">
     <a href="coursework.html" class="underline">Home</a>
