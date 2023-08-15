@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hobbies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black; /* Black background for the header */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+            font-family: 'Impact', Charcoal, sans-serif; /* Different font style */
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .tabs a {
+            text-decoration: none;
+            color: white; /* Changed the color to red */
+            margin: 0 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+
+        .tabs a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .tabs a.underline {
+            text-decoration: underline; /* Removed the underline */
+        }
+
+        .hobbies-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #f8f1d7; /* Parchment-style background color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border: 2px solid #d9bf87; /* Border around the parchment */
+        }
+
+        .hobbies-header {
+            font-size: 36px; /* Changed font size */
+            font-weight: bold;
+            color: #00008b; /* Changed the color to deep blue */
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .hobbies-content {
+            font-size: 18px;
+            color: #444;
+            line-height: 1.6; /* Adjust line height for better readability */
+            text-align: justify;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: black; /* Black background for the footer */
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .notlined {
+            text-decoration: none;
+        }
+
+        .footer::before {
+            content: "Last updated: ";
+            font-weight: bold;
+        }
+
+        .footer span {
+            font-style: italic;
+        }
+
+        .notlined {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="tabs">
+            <a href="somnathbtcjee.github.io">Home</a>
+            <a href="coursework.html">Course Work</a>
+            <a href="taship.html" >TA-ship</a> <!-- Underlined TA-ship tab -->
+            <a href="internships.html">Research Internships and Talks</a>
+            <a href="hobbies.html" class="underline">Hobbies</a>
+            <!-- Add more tabs as needed -->
+        </div>
+    </header>
+	
+    <div class="hobbies-container">
+        <div class="hobbies-header">Hobbies</div>
+        <div class="hobbies-content">
+            <p>I am one of the co-editors of a Bengali science magazine named "Tiyas." If you are interested, you can follow our <a href="https://www.facebook.com/tiyasmagazine">page</a>. You may find some good articles, quizzes, crosswords, and many more.</p>
+        
+        <p>I was a member of the organizing committee of <a href="https://www.tessellate.cmi.ac.in/">Tessellate</a> 2020.</p>
+        
+        <p>I was also a member of the question setters for <a href="https://www.tessellate.cmi.ac.in//stems">Stems</a> 2021, 2022, and 2023.</p>
+        
+        <p>I am a huge football enthusiast and a devoted fan of FC Barcelona, although their current performances are disappointing :'(</p>
+        
+        <p>Aside from football, I also enjoy other sports like cricket, basketball, and tennis.</p>
+        <p>Literature is another one of my interests. Some of my favorites include Durbin, Shrikanto, The Alchemist, the Harry Potter series, the Robert Langdon series, and many more. I am also passionate about watching movies, especially thrilling ones. Some of my top picks are 3 idiots, Hirak Rajar Deshe, Jojo Rabbit, Coco, Prestige, and more.</p>
+        
+        <p>If you want to discuss sports, literature, movies, and music (also academics) feel free to ping me :)</p>
+
+        </div>
+    </div>
+    <div class="footer">
+        Last updated: <span id="lastUpdated"></span>
+    </div>
+    <script>
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();
+        var month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+        var day = ("0" + currentDate.getDate()).slice(-2);
+        var formattedDate = year + "-" + month + "-" + day;
+        document.getElementById("lastUpdated").textContent = formattedDate;
+    </script>
+</body>
+</html>
