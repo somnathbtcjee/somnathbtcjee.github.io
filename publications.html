@@ -18,7 +18,7 @@
             color: white;
             text-align: center;
             padding: 20px;
-            font-size: 28px;
+            font-size: 36px; /* Increased font size for header */
             font-family: 'Impact', Charcoal, sans-serif; /* Different font style */
             position: sticky;
             top: 0;
@@ -27,7 +27,7 @@
 
         .tabs a {
             text-decoration: none;
-            color: white; /* Changed the color to red */
+            color: white; /* Changed the color to white */
             margin: 0 10px;
             padding: 10px;
             border-radius: 5px;
@@ -53,17 +53,14 @@
         }
 
         .publication-header {
-            font-size: 28px; /* Changed font size to match TA-ship */
+            font-size: 36px; /* Changed font size */
             font-weight: bold;
-            color: white; /* Changed the color to match TA-ship */
-            background-color: black; /* Match background color with TA-ship */
-            text-align: center;
-            padding: 10px 0; /* Adjusted padding */
+            color: #00008b; /* Changed the color to deep blue */
             margin-bottom: 10px;
         }
 
         .publication-item {
-            margin-bottom: 20px; /* Increased space between publication entries */
+            margin-bottom: 15px; /* Added some space between publication entries */
             display: flex;
             flex-direction: column; /* Changed the flex direction to column */
             align-items: flex-start; /* Changed alignment to flex-start */
@@ -72,31 +69,24 @@
         .publication-title {
             font-size: 22px; /* Changed font size for publication titles */
             color: #00008b; /* Changed the color to deep blue */
-            margin-bottom: 10px; /* Increased margin between publication title and content */
+            margin-bottom: 3px; /* Reduced margin between publication title and content */
         }
 
         .publication-authors {
             font-size: 18px; /* Changed font size for authors */
             color: #444;
-            margin-bottom: 5px; /* Increased margin between authors and details */
+            margin-bottom: 3px; /* Reduced margin between authors and details */
         }
 
         .publication-details {
             font-size: 18px; /* Changed font size for publication details */
             color: #444;
-            margin-bottom: 5px; /* Increased margin between publication details */
+            margin-bottom: 3px; /* Reduced margin between publication details */
         }
 
-        .bullet {
-            margin-right: 10px;
-            display: inline-block;
-            width: 5px;
-            height: 5px;
-            background-color: black;
-            border-radius: 50%;
-            margin-left: 10px;
-            margin-top: 5px;
-            margin-bottom: 4px;
+        .publication-item:not(:last-child) {
+            border-bottom: 1px solid #ccc; /* Add a horizontal line at the bottom of each publication item except the last one */
+            padding-bottom: 15px; /* Added some space after the line */
         }
 
         .footer {
@@ -126,6 +116,17 @@
         .notlined {
             text-decoration: none;
         }
+
+        .bullet {
+            margin-right: 10px;
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background-color: black;
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-bottom: 4px;
+        }
     </style>
 </head>
 <body>
@@ -140,7 +141,7 @@
             <!-- Add more tabs as needed -->
         </div>
     </header>
-	
+    
     <div class="publication-container">
         <div class="publication-header">Publications</div>
         <div class="publication-item">
