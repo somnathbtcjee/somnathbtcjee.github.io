@@ -8,18 +8,18 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #f1e6e6;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: black; /* Black background for the header */
+            background-color: black;
             color: white;
             text-align: center;
             padding: 20px;
-            font-size: 28px; /* Match font size with TA-ship */
-            font-family: 'Impact', Charcoal, sans-serif; /* Different font style */
+            font-size: 28px;
+            font-family: 'Impact', Charcoal, sans-serif;
             position: sticky;
             top: 0;
             z-index: 999;
@@ -27,7 +27,7 @@
 
         .tabs a {
             text-decoration: none;
-            color: white; /* Changed the color to white */
+            color: white;
             margin: 0 10px;
             padding: 10px;
             border-radius: 5px;
@@ -41,7 +41,7 @@
         }
 
         .tabs a.underline {
-            text-decoration: underline; /* Removed the underline */
+            text-decoration: underline;
         }
 
         .publication-container {
@@ -53,45 +53,61 @@
         }
 
         .publication-header {
-            font-size: 36px; /* Match font size with header */
+            font-size: 36px;
             font-weight: bold;
-            color: #00008b; /* Changed the color to deep blue */
+            color: #00008b;
             margin-bottom: 10px;
         }
 
         .publication-item {
-            margin-bottom: 15px; /* Added some space between publication entries */
+            margin-bottom: 15px;
             display: flex;
-            flex-direction: column; /* Changed the flex direction to column */
-            align-items: flex-start; /* Changed alignment to flex-start */
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .publication-title {
-            font-size: 21px; /* Changed font size for publication titles */
-            color: #00008b; /* Changed the color to deep blue */
-            margin-bottom: 7px; /* Reduced margin between publication title and content */
+            font-size: 21px;
+            color: #00008b;
+            margin-bottom: 7px;
+            display: flex;
+            align-items: center;
         }
 
         .publication-authors {
-            font-size: 17px; /* Changed font size for authors */
+            font-size: 17px;
             color: #444;
-            margin-bottom: 7px; /* Reduced margin between authors and details */
+            margin-bottom: 7px;
         }
 
         .publication-details {
-            font-size: 17px; /* Changed font size for publication details */
+            font-size: 17px;
             color: #444;
-            margin-bottom: 3px; /* Reduced margin between publication details */
+            margin-bottom: 3px;
         }
 
         .publication-item:not(:last-child) {
-            border-bottom: 1px solid #ccc; /* Add a horizontal line at the bottom of each publication item except the last one */
-            padding-bottom: 15px; /* Added some space after the line */
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+        }
+
+        .abstract-box, .pdf-box {
+            cursor: pointer;
+            background-color: #00008b;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: 16px;
+        }
+
+        .pdf-box {
+            background-color: #004d99;
         }
 
         .footer {
             text-align: center;
-            background-color: black; /* Black background for the footer */
+            background-color: black;
             color: white;
             padding: 10px;
             position: fixed;
@@ -127,6 +143,43 @@
             margin-top: 5px;
             margin-bottom: 4px;
         }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 550px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -135,37 +188,85 @@
             <a href="index.html">Home</a>
             <a href="coursework.html">Course Work</a>
             <a href="taship.html">TA-ship</a>
-            <a href="publications.html" class="underline">Publications</a> <!-- Underlined Publications tab -->
+            <a href="publications.html" class="underline">Publications</a>
             <a href="internships.html">Research Internships and Talks</a>
             <a href="hobbies.html">Hobbies</a>
-            <!-- Add more tabs as needed -->
         </div>
     </header>
     
     <div class="publication-container">
         <div class="publication-header">Publications</div>
         <div class="publication-item">
-            <div class="publication-title">Exponential Lower Bounds via Exponential Sums</div>
+            <div class="publication-title">
+                Exponential Lower Bounds via Exponential Sums
+                <div class="abstract-box" onclick="openModal(this)">Abstract</div>
+                <!--div class="pdf-box" onclick="window.open('somnathbtcjee.github.io/my_pub/Exp_Lb_via_Exp_sum.pdf', '_blank')">PDF</div-->
+            </div>
             <div class="publication-authors"><span class="bullet"></span>Joint work with <a href="https://cc.cs.uni-saarland.de/mblaeser/">Markus Bläser</a>(University of Saarland), <a href="https://sites.google.com/view/pduttashomepage/home">Pranjal Dutta</a>(NUS) and Saswata Mukherjee (CMI)</div>
             <div class="publication-details"><span class="bullet"></span>To appear in the 51st EATCS International Colloquium on Automata, Languages and Programming (<a href="https://compose.ioc.ee/icalp2024/#icalp">ICALP 2024</a>)</div>
+            <div class="abstract" style="display:none;">Valiant's famous VP vs. VNP conjecture states that the symbolic permanent polynomial does not have polynomial-size algebraic circuits. 
+                However, the best upper bound on the size of the circuits computing the permanent is exponential. Informally, VNP is an exponential sum of VP-circuits. 
+                In this paper we study whether, in general,
+                exponential sums of <i>algebraic circuits</i> require <i>exponential-size</i> algebraic circuits. We show that the famous Shub-Smale tau-conjecture indeed implies such an exponential lower bound for an exponential sum.
+                Our main tools come from parameterized complexity. 
+                Along the way, we also prove an exponential fpt (fixed-parameter tractable) lower bound for the parameterized algebraic complexity class VW[P] (constant-free, unbounded degree), assuming the same conjecture. VW[P] can be thought of as the weighted sums of (unbounded-degree) circuits, where only +1/-1 constants are <i> cost-free</i>. To the best of our knowledge, this is the <i>first</i> time the Shub-Smale tau-conjecture has been applied to prove explicit exponential lower bounds.
+                
+                Furthermore, we prove that when this class is fpt,
+                then a variant of the counting hierarchy, namely the <i> linear counting hierarchy</i> collapses.
+                Moreover, if a certain type of parameterized exponential sums is fpt, then integers, as well as polynomials with coefficients being <i>definable</i> in the linear
+                counting hierarchy have subpolynomial tau-complexity.
+                
+                Finally, we characterize a related class VW[F]$, in terms of permanents, where we consider an exponential sum of algebraic formulas instead of circuits. We show that when we sum over cycle covers that have one long cycle and all other cycles have constant length,  then the resulting family of polynomials is  <i>complete</i> for VW[F] on certain types of graphs.</div>
         </div>
         <!-- Add more publication entries as needed -->
     </div>
+    
+    <div class="publication-container">
+        <div class="publication-header">Dissertations</div>
+        <div class="publication-item">
+            <div class="publication-title">
+                A study on Rank computation problem for Linear matrices
+                <div class="abstract-box" onclick="openModal(this)">Abstract</div>
+                <div class="pdf-box" onclick="window.open('somnathbtcjee.github.io/my_pub/MSc_Thesis.pdf', '_blank')">PDF</div>
+            </div>
+            <div class="publication-authors"><span class="bullet"></span>Thesis for MSc in Computer Science, CMI </div>
+            <div class="publication-details"><span class="bullet"></span>Advisor: <a href="cmi.ac.in/~partham">Prof. Partha Mukhopadhyay</a></div>
+            <div class="abstract" style="display:none;">One of the most important open problems in algebraic complexity theory is to design an efficient deterministic algorithm for computing the rank of linear matrices (usually stated over a set of commutative variables). At present, we know efficient deterministic algorithms when the variables do not commute, and when the variables partially commute (in a limited sense). Also, for the commutative case, a fully polynomial-time rank approximation is known. In this study, we focus on the approximation problem further. We provide a gentle outline of the known algorithms and then highlight some aspects of an approximation algorithm in the setting of partially commutative variables.</div>
+        </div>
+        <!-- Add more publication entries as needed -->
+    </div>
+    
     <div class="footer">
-        Last updated: 11th May, 2024
+        Last updated: 13th June, 2024
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalAbstract"></p>
+        </div>
     </div>
 
     <script>
-        window.onload = function () {
-            // Get all publication items
+        document.addEventListener('DOMContentLoaded', function () {
+            // Numbering publication items
             var publicationItems = document.querySelectorAll('.publication-item');
-
-            // Loop through each item and update its number
             publicationItems.forEach(function (item, index) {
                 var number = index + 1;
                 item.querySelector('.publication-title').innerHTML = number + '. ' + item.querySelector('.publication-title').innerHTML;
             });
-        };
+        });
+
+        function openModal(element) {
+            var abstractText = element.parentNode.parentNode.querySelector('.abstract').textContent;
+            document.getElementById('modalAbstract').textContent = abstractText;
+            document.getElementById('myModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
 
         var currentDate = new Date();
         var year = currentDate.getFullYear();
