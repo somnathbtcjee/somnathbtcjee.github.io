@@ -8,26 +8,26 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #f1e6e6;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: black; /* Black background for the header */
+            background-color: black;
             color: white;
             text-align: center;
             padding: 20px;
             font-size: 28px;
-            font-family: 'Impact', Charcoal, sans-serif; /* Different font style */
+            font-family: 'Impact', Charcoal, sans-serif;
             position: sticky;
             top: 0;
             z-index: 999;
         }
 
-                .tabs a {
+        .tabs a {
             text-decoration: none;
-            color: white; /* Changed the color to red */
+            color: white;
             margin: 0 10px;
             padding: 10px;
             border-radius: 5px;
@@ -41,10 +41,10 @@
         }
 
         .tabs a.underline {
-            text-decoration: underline; /* Removed the underline */
+            text-decoration: underline;
         }
 
-        .internship-container {
+        .internship-container, .talks-container {
             max-width: 800px;
             margin: 20px auto;
             background-color: #fff;
@@ -52,59 +52,62 @@
             padding: 20px;
         }
 
-        .internship-header {
-            font-size: 36px; /* Changed font size */
+        .internship-header, .talks-header {
+            font-size: 36px;
             font-weight: bold;
-            color: #00008b; /* Changed the color to deep blue */
+            color: #00008b;
             margin-bottom: 10px;
         }
 
-        .internship-item {
-            margin-bottom: 15px; /* Added some space between internship entries */
+        .internship-item, .talk-item {
+            margin-bottom: 15px;
             display: flex;
-            flex-direction: column; /* Changed the flex direction to column */
-            align-items: flex-start; /* Changed alignment to flex-start */
+            flex-direction: column;
+            align-items: flex-start;
         }
 
-        .internship-time {
+        .internship-time, .talk-title {
             font-size: 18px;
-            color: #00008b; /* Changed the color to deep blue */
-            font-weight: bold; /* Added bold font weight for time */
+            color: #00008b;
+            font-weight: bold;
         }
 
-        .internship-description {
+        .internship-description, .talk-description {
             font-size: 18px;
             color: #444;
-			margin-top: 10px;
-            margin-left: 15px; /* Added margin to create space between time and description */
+            margin-top: 10px;
+            margin-left: 15px;
         }
 
         .internship-abstract {
             font-size: 18px;
             color: #444;
-		margin-top: 6px;
-            margin-left: 25px; /* Added margin to create space between time and abstract */
-            font-style: italic; /* Added italic style to the abstract */
+            margin-top: 6px;
+            margin-left: 25px;
+            font-style: italic;
         }
 
-        .internship-item:not(:last-child) {
-            border-bottom: 1px solid #ccc; /* Add a horizontal line at the bottom of each internship item except the last one */
-            padding-bottom: 15px; /* Added some space after the line */
+        .internship-item:not(:last-child), .talk-item:not(:last-child) {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+        }
+
+        .talk-slides {
+            margin-top: 10px;
+            margin-left: 15px;
+            font-size: 18px;
+            color: #00008b;
         }
 
         .footer {
             text-align: center;
-            background-color: black; /* Black background for the footer */
+            background-color: black;
             color: white;
             padding: 10px;
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-        }
-
-        .notlined {
-            text-decoration: none;
         }
 
         .footer::before {
@@ -127,26 +130,65 @@
             <a href="https://somnathbtcjee.github.io/">Home</a>
             <a href="coursework.html">Course Work</a>
             <a href="taship.html">TA-ship</a>
-		<a href="publications.html">Publications</a><!-- Underlined TA-ship tab -->
+            <a href="publications.html">Publications</a>
             <a href="internships.html" class="underline">Research Internships and Talks</a>
             <a href="hobbies.html">Hobbies</a>
-            <!-- Add more tabs as needed -->
         </div>
     </header>
-	
+
+    <div class="talks-container">
+        <div class="talks-header">Talks</div>
+        <div class="talk-item">
+            <div class="talk-title">A study on Rank Computation problem for Linear matrices</div>
+            <div class="talk-description">MSc Thesis Presentation, CMI</div>
+            <div class="talk-slides"><a href="presentation/Thesis_slides.pdf">Slides</a></div>
+        </div>
+        <div class="talk-item">
+            <div class="talk-title">"Decidability in Timed Communication Automata" by Clemente</div>
+            <div class="talk-description">Course-work presentation (Timed Automata), CMI</div>
+            <div class="talk-slides"><a href="https://somnathbtcjee.github.io/presentation/Timed_Aut.pdf">Slides</a></div>
+        </div>
+        <div class="talk-item">
+            <div class="talk-title">"Linear Matroid Intersection is in QuasiNC" by Gurjar and Thierauf</div>
+            <div class="talk-description">Course-work presentation (Parallel Algorithm and Complexity), CMI</div>
+            <div class="talk-slides"><a href="https://somnathbtcjee.github.io/presentation/Lin_Mat_QuasiNC.pdf">Slides</a></div>
+        </div>
+        <div class="talk-item">
+            <div class="talk-title">"BPSPACE(S) in DSPACE(S^{3/2})" by Saks and Zhou</div>
+            <div class="talk-description">Course-work presentation (Complexity Theory II), CMI</div>
+            <div class="talk-slides"><a href="https://www.cmi.ac.in/~somnathb/coursework/CT2/report.pdf">Report</a></div>
+        </div>
+        <div class="talk-item">
+            <div class="talk-title">"An O(n log^2 n) Algorithm for Maximum Flow in Undirected Planar Networks" by Hassin and Johnson</div>
+            <div class="talk-description">Course-work presentation (Matching and Flow Algorithms), CMI</div>
+            <div class="talk-slides"><a href="https://www.cmi.ac.in/~somnathb/coursework/MFalgo_report_Somnath.pdf">Report</a>, <a href="https://www.cmi.ac.in/~somnathb/coursework/MFalgo_slides">Slides</a></div>
+        </div>
+        <div class="talk-item">
+            <div class="talk-title">"Lattice Basis Delegation in Fixed Dimension and Shorter-Ciphertext Hierarchical IBE” by Agrawal, Boneh and Boyen</div>
+            <div class="talk-description">Course-work presentation (Structure vs Hardness in Cryptography), IITM</div>
+            <div class="talk-slides"><a href="https://drive.google.com/file/d/1SDTCeR3NllZ4g3EEIv_5V4K9TfeKC_TK/view?usp=sharing">Report</a>, <a href="https://drive.google.com/file/d/1m2a9rsX5scwQGq68eCU1B8r7afrLlUTW/view?usp=sharing">Slides</a></div>
+        </div>
+        <div class="talk-item">
+            <div class="talk-title">Progress on PIT</div>
+            <div class="talk-description">CMI Student Seminar, 2021</div>
+            <div class="talk-slides"><a href="https://somnathbtcjee.github.io/presentation/Lin_Mat_QuasiNC.pdf">Slides</a></div>
+        </div>
+        <!-- Add more talk items as needed -->
+    </div>
+    
     <div class="internship-container">
         <div class="internship-header">Research Internships</div>
-		<div class="internship-item">
-            <div class="internship-time"> Oct'23-Jan'24</div>
+        <div class="internship-item">
+            <div class="internship-time">Oct'23-Jan'24</div>
             <div class="internship-description">Project on Witness for ABP-PIT via non-commutativity under prof. <a href="https://www.cmi.ac.in/~partham/" class="notlined">Partha Mukhopadhyay</a> and prof <a href="https://www.doc.ic.ac.uk/~itzamere/" class="notlined">Iddo Tzameret</a></div>
             <div class="internship-abstract">In this project, I studied upper bounds and lower bounds for the proof-size of non commutative ABPs (which are commutatively zero) using commutators as axioms.</div>
         </div>
-	    <div class="internship-item">
+        <div class="internship-item">
             <div class="internship-time">Summer 2023</div>
             <div class="internship-description">Worked on Black-box approximate algorithm for Edmond problem under prof. <a href="https://www.cmi.ac.in/~partham/" class="notlined">Partha Mukhopadhyay</a> and prof <a href="https://cabhranil.bitbucket.io/" class="notlined">Abhranil Chatterjee</a></div>
             <div class="internship-abstract">In this project I tried to ﬁnd black box subexponential approximate algorithm for edmonds’ problem using Bläser-Jindal-Pandey idea. I also read about algorithms for matroids using edmonds’ problem (commutative and non-commutative both) algorithms.</div>
         </div>
-		<div class="internship-item">
+        <div class="internship-item">
             <div class="internship-time">Oct'22-Jan'24</div>
             <div class="internship-description">Worked on The conditional optimality of Ryser formula: Algebraic version of Strong ETH with prof. <a href="https://cc.cs.uni-saarland.de/mblaeser/" class="notlined">Markus Bläser</a>, <a href="https://sites.google.com/view/pduttashomepage" class="notlined">Pranjal Dutta</a> and Saswata Mukherjee</div>
             <div class="internship-abstract">In this project I learned about parameterized complexity and ﬁne grained complexity and their relation with algebraic complexity. We ﬁnally achieve exponential lower bound in parameterized valiant classes from tau-conjecture. This project leads to the paper Exponential Lowerbounds via Exponential sums.</div>
@@ -156,21 +198,21 @@
             <div class="internship-description">Study on Uniform Determinantal Complexity under prof. <a href="https://cc.cs.uni-saarland.de/mblaeser/" class="notlined">Markus Bläser</a> with my batchmate Saswata Mukherjee</div>
             <div class="internship-abstract">We improved the upper and lower bounds for restricted generic polynomials with/without help of approximation. I will upload the report oneday</div>
         </div>
-		<div class="internship-item">
-            <div class="internship-time">Feb-Apr'22</div> 	
+        <div class="internship-item">
+            <div class="internship-time">Feb-Apr'22</div>     
             <div class="internship-description">Reading project on Border complexity under prof. <a href="https://www.cmi.ac.in/~partham/" class="notlined">Partha Mukhopadhyay</a> with my batchmate Saswata Mukherjee</div>
-            
         </div>
         <div class="internship-item">
-            <div class="internship-time">Summer 2021</div>
+            <div class="internship-time">Summehttps://drive.google.com/file/d/1SDTCeR3NllZ4g3EEIv_5V4K9TfeKC_TK/view?usp=sReportr 2021</div>
             <div class="internship-description">Polynomial Identity Testing and Diagonal Circuit under prof. <a href="https://www.cse.iitk.ac.in/users/nitin/" class="notlined">Nitin Saxena</a> with my batchmate Saswata Mukherjee</div>
             <div class="internship-abstract">We did a basic study on PIT and focus on studying PIT for RO-ABPs <br>||<a href="file:///C:/Users/S%20Bhattacharya/Desktop/report/Report.pdf">Report</a>|| </div>
         </div>
-        <!-- Add more internship entries as needed -->
     </div>
+
+<br>
     <div class="footer">
-        Last updated: 9th May, 2024</span>
-    </div>
+        Last updated: 13th June, 2024
+   
 
     <script>
         var currentDate = new Date();
