@@ -198,6 +198,30 @@
         <div class="publication-header">Publications</div>
         <div class="publication-item">
             <div class="publication-title">
+                Constant-depth circuits for polynomial GCD over any characteristic
+                <div class="abstract-box" onclick="openModal(this)">Abstract</div>
+                <div class="pdf-box" onclick="window.open('https://eccc.weizmann.ac.il/report/2025/085/', '_blank')">PDF</div>
+            </div>
+            <div class="publication-authors"><span class="bullet"></span>Joint work with <a href="https://mrinalkr.bitbucket.io">Mrinal Kumar</a> (TIFR),<a href="https://shanthanu9.github.io/">Shantanu Rai</a> (TIFR), <a href="https://varunramanathan.bitbucket.io">Varun Ramanathan</a> (TIFR), <a href="https://www.tcs.tifr.res.in/~ramprasad/">Ramprasad Saptharishi</a> (TIFR) and <a href="https://www.math.toronto.edu/ssaraf/">Shubhangi Saraf</a> (UofT)</div>
+            <div class="publication-details"><span class="bullet"></span>Submitted</div>
+            <div class="abstract" style="display:none;">We show that the GCD of two univariate polynomials can be computed by (piece-wise) algebraic circuits of constant depth and polynomial size over any sufficiently large field, regardless of the characteristic. This extends a recent result of Andrews \& Wigderson who showed such an upper bound over fields of zero or large characteristic.
+
+Our proofs are based on a recent work of Bhattacharjee, Kumar, Rai, Ramanathan, Saptharishi \& Saraf that shows closure of constant depth algebraic circuits under factorization. On our way to the proof, we show that any n-variate symmetric polynomial P that has a small constant depth algebraic circuit can be written as the composition of a small constant depth algebraic circuit with elementary symmetric polynomials. This statement is a constant depth version of a result of Bl\"{a}ser \& Jindal, who showed this for algebraic circuits of unbounded depth. As an application of our techniques, we also strengthen the closure results for factors of constant-depth circuits in the work of Bhattacharjee et al. over fields for small characteristic.</div>
+        </div>
+        <div class="publication-title">
+                Closure under factorization from a result of Furstenberg
+                <div class="abstract-box" onclick="openModal(this)">Abstract</div>
+                <div class="pdf-box" onclick="window.open('https://eccc.weizmann.ac.il/report/2025/084/', '_blank')">PDF</div>
+            </div>
+            <div class="publication-authors"><span class="bullet"></span>Joint work with <a href="https://mrinalkr.bitbucket.io">Mrinal Kumar</a> (TIFR),<a href="https://shanthanu9.github.io/">Shantanu Rai</a> (TIFR), <a href="https://varunramanathan.bitbucket.io">Varun Ramanathan</a> (TIFR), <a href="https://www.tcs.tifr.res.in/~ramprasad/">Ramprasad Saptharishi</a> (TIFR) and <a href="https://www.math.toronto.edu/ssaraf/">Shubhangi Saraf</a> (UofT)</div>
+            <div class="publication-details"><span class="bullet"></span>Submitted</div>
+            <div class="abstract" style="display:none;">We show that algebraic formulas and constant-depth circuits are \emph{closed} under taking factors. In other words, we show that if a multivariate polynomial over a field of characteristic zero has a small constant-depth circuit or formula, then all its factors can be computed by small constant-depth circuits or formulas respectively.
+
+Our result turns out to be an elementary consequence of a fundamental and surprising result of Furstenberg from the 1960s, which gives a non-iterative description of the power series roots of a bivariate polynomial. Combined with standard structural ideas in algebraic complexity, we observe that this theorem yields the desired closure results.
+
+As applications, we get alternative (and perhaps simpler) proofs of various known results and strengthen the quantitative bounds in some of them. This includes a unified proof of known closure results for algebraic models (circuits, branching programs and VNP), an extension of the analysis of the Kabanets-Impagliazzo hitting set generator to formulas and constant-depth circuits, and a (significantly) simpler proof of correctness as well as stronger guarantees on the output in the subexponential time deterministic algorithm for factorization of constant-depth circuits from a recent work of Bhattacharjee, Kumar, Ramanathan, Saptharishi \& Saraf.</div>
+        <div class="publication-item">
+            <div class="publication-title">
                 Deterministic factorization of constant-depth algebraic circuits in subexponential time
                 <div class="abstract-box" onclick="openModal(this)">Abstract</div>
                 <div class="pdf-box" onclick="window.open('http://arxiv.org/abs/2504.08063', '_blank')">PDF</div>
@@ -251,7 +275,7 @@ For our proofs, we rely on a finer understanding of the structure of power serie
     </div>
     
     <div class="footer">
-        Last updated: 10th May, 2025
+        Last updated: 30th June, 2025
     </div>
 
     <!-- The Modal -->
