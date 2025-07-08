@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 <head>
     <title>Publications</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -177,19 +175,25 @@
             cursor: pointer;
         }
 
-        /* New styles for publication links */
+        /* Updated link styles for publications */
         .publication-authors a,
         .publication-details a {
             text-decoration: none;
-            color: inherit;
+            color: #00008b; /* consistent color */
         }
 
         .publication-authors a:visited,
         .publication-details a:visited {
-            color: inherit;
+            color: #00008b; /* prevent visited color change */
+        }
+
+        .publication-authors a:hover,
+        .publication-details a:hover {
+            text-decoration: underline; /* optional hover effect */
         }
     </style>
 </head>
+
 
 
 <body>
