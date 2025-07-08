@@ -116,10 +116,6 @@
             width: 100%;
         }
 
-        .notlined {
-            text-decoration: none;
-        }
-
         .footer::before {
             content: "Last updated: ";
             font-weight: bold;
@@ -180,8 +176,22 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        /* New styles for publication links */
+        .publication-authors a,
+        .publication-details a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .publication-authors a:visited,
+        .publication-details a:visited {
+            color: inherit;
+        }
     </style>
 </head>
+
+
 <body>
     <header>
         <div class="tabs">
