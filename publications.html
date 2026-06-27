@@ -212,6 +212,22 @@
         <div class="publication-header">Publications</div>
         <div class="publication-item">
             <div class="publication-title">
+                Deterministic Algorithms for Low Individual Degree Factors of Sparse Polynomials
+                <div class="abstract-box" onclick="openModal(this)">Abstract</div>
+                <div class="pdf-box" onclick="window.open('https://arxiv.org/abs/2606.27293v1')">PDF</div>
+            </div>
+            <div class="publication-authors"><span class="bullet"></span>Joint work with Rishabh Kothary (UofT), <a href="https://shanthanu9.github.io/">Shanthanu Rai</a> (TIFR) and <a href="https://www.math.toronto.edu/ssaraf/">Shubhangi Saraf</a> (UofT)</div>
+            <div class="publication-details"><span class="bullet"></span>Manuscript</div>
+            <div class="abstract" style="display:none;">
+                We study factoring algorithms for general sparse polynomials and sparse polynomials of bounded individual degree and prove the following results.
+  1. We give a deterministic polynomial-time algorithm which takes as input an $n$-variate $s$-sparse polynomial $f$ of bounded individual degree $d$ and outputs a list $\mathcal{L}$ of circuits which contains all factors of $f$, although there might be additional spurious circuits in the list. The algorithm runs in time $\operatorname{poly}(n, s^d)$. Additionally, we can ensure that every circuit in the list has constant depth. Our algorithm works over all fields of characteristic 0 or sufficiently large characteristic.
+  Our result generalizes a recent result of Chuyoon and Shpilka that gives a $\operatorname{poly}(n, s^d)$-time algorithm for recovering all sparse factors of $f$ (without spurious factors). As a corollary, we can also recover all factors of $f$ (without spurious factors) in time $\operatorname{poly}(n, s^{d^2 \log n})$, and recover the algorithmic result of Bhargava, Saraf and Volkovich and its improvement by Chuyoon and Shpilka. Both the above consequences follow from known interpolation and divisibility testing techniques.
+  2. We give a deterministic quasipolynomial-time algorithm which takes as input a general $n$-variate $s$-sparse polynomial $f$ of (unbounded) individual degree $D$ and outputs a list $\cL$ of polynomials which contains all factors of $f$ that have bounded individual degree $d$. The algorithm runs in time $\operatorname{poly}(D^{d \log s}, s^{d^2 \log n})$ and works over arbitrary fields. The list may again contain spurious elements. Our result strengthens results of Dutta, Sinhababu and Thierauf and Kumar, Ramanathan and Saptharishi which give algorithms to recover all factors of $f$ of bounded total degree.
+  A consequence of our algorithm is a new upper bound on the total number of bounded individual degree factors of a sparse polynomial.
+            </div>
+
+        <div class="publication-item">
+            <div class="publication-title">
                 Constant-depth circuits for polynomial GCD over any characteristic
                 <div class="abstract-box" onclick="openModal(this)">Abstract</div>
                 <div class="pdf-box" onclick="window.open('https://eccc.weizmann.ac.il/report/2025/085/', '_blank')">PDF</div>
@@ -291,7 +307,7 @@ For our proofs, we rely on a finer understanding of the structure of power serie
     </div>
     
     <div class="footer">
-        Last updated: 6th May, 2026
+        Last updated: 26th June, 2026
     </div>
 
     <!-- The Modal -->
